@@ -62,9 +62,7 @@ export default function App() {
             <ol>
               {allPosts.map((post) => (
                 <li key={post.id}>
-                  <a rel="noreferrer" target="_blank" href={post.link}>
-                    {post.title.rendered}
-                  </a>
+                  <a href={post.link}>{post.title.rendered}</a>
                 </li>
               ))}
             </ol>
@@ -79,12 +77,7 @@ export default function App() {
               <ErrorMessage message={error} />
             ) : (
               posts.map((postById) => (
-                <a
-                  key={postById.id}
-                  rel="noreferrer"
-                  target="_blank"
-                  href={postById.link}
-                >
+                <a key={postById.id} href={postById.link}>
                   {postById.title.rendered}
                 </a>
               ))
